@@ -8,8 +8,20 @@ beforeAll(() => {
 afterAll(() => {
   app.stop();
 });
-test("test_index_page_return_it_works", done => {
-  client.get("/").expect(200, "It works!", done);
+
+app.route("/status", () => {
+  return "It works!";
+});
+
+app.route("/", () => {
+  return "Welcome to Typhoon!";
+});
+
+test("test_status_page_return_it_works", done => {
+  client.get("/status").expect(200, "It works!", done);
+});
+test("test_home_page_return_greeting", done => {
+  client.get("/").expect(200, "Welcome to Typhoon!", done);
 });
 test("test_404_page", done => {
   client.get("/404").expect(404, "Not found", done);
