@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "eg2.tslint",
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "rebornix.project-snippets"
+  ]
+}

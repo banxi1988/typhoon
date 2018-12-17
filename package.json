@@ -1,0 +1,36 @@
+{
+  "name": "typhoon",
+  "private": true,
+  "version": "0.0.1",
+  "description": "A Flask(Python) inspired web microframework with TypeScript and Node",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest --detectOpenHandles",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "build": "yarn build-ts && yarn tslint"
+  },
+  "keywords": [],
+  "author": "banxi",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^23.3.2",
+    "husky": "^1.0.0-rc.13",
+    "jest": "^23.6.0",
+    "prettier": "^1.13.7",
+    "pretty-quick": "^1.6.0",
+    "ts-jest": "^23.10.1",
+    "ts-loader": "^5.1.1",
+    "ts-node": "^7.0",
+    "tslint": "^5.0",
+    "tslint-eslint-rules": "^5.3.1",
+    "typescript": "^3.2.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "dependencies": {}
+}
